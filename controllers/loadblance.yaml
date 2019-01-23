@@ -1,0 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: l 
+spec:
+  selector:
+    app: nginx
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 9376
+  clusterIP: 10.96.1.2
+  loadBalancerIP: 78.11.24.19
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 10.98.19.68
